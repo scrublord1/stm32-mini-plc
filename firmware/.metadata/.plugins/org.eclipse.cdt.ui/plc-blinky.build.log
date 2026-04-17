@@ -1,0 +1,10 @@
+01:33:57 **** Incremental Build of configuration Debug for project plc-blinky ****
+make -j16 all 
+arm-none-eabi-size  plc-blinky.elf 
+   text	   data	    bss	    dec	    hex	filename
+   4692	     12	   1572	   6276	   1884	plc-blinky.elf
+Finished building: default.size.stdout
+ 
+
+01:33:58 Build Finished. 0 errors, 0 warnings. (took 136ms)
+
