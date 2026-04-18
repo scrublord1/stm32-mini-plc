@@ -1,25 +1,32 @@
 #include "scan_engine.h"
 #include "main.h"
+#include "io_image.h"
 
 static uint32_t scan_count = 0;
 
 void scan_engine_init(void) {
     scan_count = 0;
+    io_image_init();
 }
 
 void scan_cycle_run(void) {
-	HAL_GPIO_TogglePin(GPIOA, GPIO_PIN_0);
+    HAL_GPIO_TogglePin(GPIOA, GPIO_PIN_0);  // scan pulse for logic analyzer
+
     scan_count++;
 
-    // For now, just toggle the LED every 50 scans (500 ms total)
-    // This proves the timer-driven scan cycle works
+    // === 3-phase PLC scan cycle ===
+
+    // Phase 1: Read inputs
+    io_read_inputs();
+
+    // Phase 2: Execute logic (dummy logic for now)
+    // Toggle output 0 every 50 scans = every 500 ms
     if ((scan_count % 50) == 0) {
-        HAL_GPIO_TogglePin(GPIOC, GPIO_PIN_13);
+        g_io.digital_out[0] = !g_io.digital_out[0];
     }
 
-    // Future: read_physical_inputs_to_image();
-    // Future: execute_ladder_program();
-    // Future: write_output_image_to_physical();
+    // Phase 3: Write outputs
+    io_write_outputs();
 }
 
 uint32_t scan_get_count(void) {

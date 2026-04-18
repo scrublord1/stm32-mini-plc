@@ -1,18 +1,10 @@
-12:09:54 **** Incremental Build of configuration Debug for project plc-blinky ****
+15:42:32 **** Incremental Build of configuration Debug for project plc-blinky ****
 make -j16 all 
-arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
-arm-none-eabi-gcc "../Src/scan_engine.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/scan_engine.d" -MT"Src/scan_engine.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/scan_engine.o"
-arm-none-eabi-gcc -o "plc-blinky.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Projects\stm32-mini-plc\firmware\plc-blinky\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="plc-blinky.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: plc-blinky.elf
- 
 arm-none-eabi-size  plc-blinky.elf 
-arm-none-eabi-objdump -h -S plc-blinky.elf  > "plc-blinky.list"
    text	   data	    bss	    dec	    hex	filename
-   7136	     12	   1644	   8792	   2258	plc-blinky.elf
+   7240	     12	   1668	   8920	   22d8	plc-blinky.elf
 Finished building: default.size.stdout
  
-Finished building: plc-blinky.list
- 
 
-12:09:55 Build Finished. 0 errors, 0 warnings. (took 939ms)
+15:42:32 Build Finished. 0 errors, 0 warnings. (took 130ms)
 
