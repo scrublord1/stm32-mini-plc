@@ -13,7 +13,8 @@ C_SRCS += \
 ../Src/stm32f1xx_it.c \
 ../Src/syscalls.c \
 ../Src/sysmem.c \
-../Src/system_stm32f1xx.c 
+../Src/system_stm32f1xx.c \
+../Src/timer_counter.c 
 
 OBJS += \
 ./Src/io_image.o \
@@ -24,7 +25,8 @@ OBJS += \
 ./Src/stm32f1xx_it.o \
 ./Src/syscalls.o \
 ./Src/sysmem.o \
-./Src/system_stm32f1xx.o 
+./Src/system_stm32f1xx.o \
+./Src/timer_counter.o 
 
 C_DEPS += \
 ./Src/io_image.d \
@@ -35,7 +37,8 @@ C_DEPS += \
 ./Src/stm32f1xx_it.d \
 ./Src/syscalls.d \
 ./Src/sysmem.d \
-./Src/system_stm32f1xx.d 
+./Src/system_stm32f1xx.d \
+./Src/timer_counter.d 
 
 
 # Each subdirectory must supply rules for building sources it contributes
@@ -45,7 +48,7 @@ Src/%.o Src/%.su Src/%.cyclo: ../Src/%.c Src/subdir.mk
 clean: clean-Src
 
 clean-Src:
-	-$(RM) ./Src/io_image.cyclo ./Src/io_image.d ./Src/io_image.o ./Src/io_image.su ./Src/ladder_vm.cyclo ./Src/ladder_vm.d ./Src/ladder_vm.o ./Src/ladder_vm.su ./Src/main.cyclo ./Src/main.d ./Src/main.o ./Src/main.su ./Src/scan_engine.cyclo ./Src/scan_engine.d ./Src/scan_engine.o ./Src/scan_engine.su ./Src/stm32f1xx_hal_msp.cyclo ./Src/stm32f1xx_hal_msp.d ./Src/stm32f1xx_hal_msp.o ./Src/stm32f1xx_hal_msp.su ./Src/stm32f1xx_it.cyclo ./Src/stm32f1xx_it.d ./Src/stm32f1xx_it.o ./Src/stm32f1xx_it.su ./Src/syscalls.cyclo ./Src/syscalls.d ./Src/syscalls.o ./Src/syscalls.su ./Src/sysmem.cyclo ./Src/sysmem.d ./Src/sysmem.o ./Src/sysmem.su ./Src/system_stm32f1xx.cyclo ./Src/system_stm32f1xx.d ./Src/system_stm32f1xx.o ./Src/system_stm32f1xx.su
+	-$(RM) ./Src/io_image.cyclo ./Src/io_image.d ./Src/io_image.o ./Src/io_image.su ./Src/ladder_vm.cyclo ./Src/ladder_vm.d ./Src/ladder_vm.o ./Src/ladder_vm.su ./Src/main.cyclo ./Src/main.d ./Src/main.o ./Src/main.su ./Src/scan_engine.cyclo ./Src/scan_engine.d ./Src/scan_engine.o ./Src/scan_engine.su ./Src/stm32f1xx_hal_msp.cyclo ./Src/stm32f1xx_hal_msp.d ./Src/stm32f1xx_hal_msp.o ./Src/stm32f1xx_hal_msp.su ./Src/stm32f1xx_it.cyclo ./Src/stm32f1xx_it.d ./Src/stm32f1xx_it.o ./Src/stm32f1xx_it.su ./Src/syscalls.cyclo ./Src/syscalls.d ./Src/syscalls.o ./Src/syscalls.su ./Src/sysmem.cyclo ./Src/sysmem.d ./Src/sysmem.o ./Src/sysmem.su ./Src/system_stm32f1xx.cyclo ./Src/system_stm32f1xx.d ./Src/system_stm32f1xx.o ./Src/system_stm32f1xx.su ./Src/timer_counter.cyclo ./Src/timer_counter.d ./Src/timer_counter.o ./Src/timer_counter.su
 
 .PHONY: clean-Src
 

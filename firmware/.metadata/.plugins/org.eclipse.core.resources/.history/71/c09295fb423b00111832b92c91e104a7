@@ -25,24 +25,6 @@ static const uint8_t motor_start_stop_program[] = {
     OP_OUT, 0x10,
     OP_END
 };
-#define NOT_GATE_PROGRAM_LEN  (sizeof(not_gate_program)) */
-// TIMER DEMO: Motor comes ON 2 seconds after Start pressed.
-// Stop acts immediately.
-//
-//   LD  I0      ; Load Start
-//   ANDN I1     ; AND NOT Stop
-//   TON T0, 2000 ; Timer T0, 2000 ms preset
-//   LDT T0      ; Load timer output
-//   OUT Q0      ; Motor output
-//   END
-static const uint8_t timer_demo_program[] = {
-    OP_LD,   0x00,
-    OP_ANDN, 0x01,
-    OP_TON,  0x20, 0xD0, 0x07,   // T0, preset = 2000 (0x07D0, little-endian)
-    OP_LDT,  0x20,
-    OP_OUT,  0x10,
-    OP_END
-};
 
-#define TIMER_DEMO_PROGRAM_LEN (sizeof(timer_demo_program))
+#define NOT_GATE_PROGRAM_LEN  (sizeof(not_gate_program)) */
 #endif /* INC_LADDER_PROGRAMS_H_ */
