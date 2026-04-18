@@ -12,6 +12,7 @@
 "./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim.o"
 "./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim_ex.o"
 "./Src/io_image.o"
+"./Src/ladder_vm.o"
 "./Src/main.o"
 "./Src/scan_engine.o"
 "./Src/stm32f1xx_hal_msp.o"
