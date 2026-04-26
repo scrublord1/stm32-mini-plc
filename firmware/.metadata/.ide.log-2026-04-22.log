@@ -1,0 +1,8 @@
+2026-04-22 19:27:11,525 [INFO] Activator:176 - 
+
+
+2026-04-22 19:27:11,530 [INFO] Activator:177 - !SESSION log4j initialized
+2026-04-22 19:27:15,222 [INFO] LogOutputStream:77 - [STDOUT_REDIRECT] 
+2026-04-22 22:52:09,424 [ERROR] ConfigurationRetriever:142 - IOException on connection: sw-center.st.com
+2026-04-22 22:52:09,425 [ERROR] ConfigurationRetriever:142 - IOException on connection: sw-center.st.com
+2026-04-22 22:52:09,425 [ERROR] ConfigurationRetriever:142 - IOException on connection: sw-center.st.com
