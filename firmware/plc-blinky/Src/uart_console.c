@@ -94,9 +94,16 @@ static void process_command(const char *cmd) {
     }
     else if (strcmp(cmd, "status") == 0) {
         printf("\r\nPLC Status:\r\n");
-        printf("  Inputs:  I0=%d I1=%d\r\n",
-               g_io.digital_in[0], g_io.digital_in[1]);
-        printf("  Outputs: Q0=%d\r\n", g_io.digital_out[0]);
+        printf("  Inputs:  ");
+        for (int i = 0; i < 8; i++) {
+            printf("I%d=%d ", i, g_io.digital_in[i]);
+        }
+        printf("\r\n");
+        printf("  Outputs: ");
+        for (int i = 0; i < 4; i++) {
+            printf("Q%d=%d ", i, g_io.digital_out[i]);
+        }
+        printf("\r\n");
         printf("  Scan count: %lu\r\n", scan_get_count());
     }
     else if (strcmp(cmd, "load motor") == 0) {

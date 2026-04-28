@@ -3,7 +3,7 @@
 ../Src/uart_console.c:38:6:uart_console_init	1
 ../Src/uart_console.c:49:6:uart_console_handle_rx	9
 ../Src/uart_console.c:77:6:uart_console_on_rx	1
-../Src/uart_console.c:83:13:process_command	11
-../Src/uart_console.c:138:6:uart_console_poll	2
-../Src/uart_console.c:147:16:uart_get_active_program	1
-../Src/uart_console.c:151:10:uart_get_active_program_len	1
+../Src/uart_console.c:83:13:process_command	13
+../Src/uart_console.c:145:6:uart_console_poll	2
+../Src/uart_console.c:154:16:uart_get_active_program	1
+../Src/uart_console.c:158:10:uart_get_active_program_len	1
